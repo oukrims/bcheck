@@ -1,0 +1,29 @@
+{
+  "name": "bcheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "level": "^8.0.1",
+    "p-limit": "^6.1.0",
+    "puppeteer": "^23.0.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-capsolver": "^2.0.1",
+    "puppeteer-extra-plugin-fingerprinter": "^1.1.9",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.25",
+    "@types/node": "^22.2.0"
+  }
+}
