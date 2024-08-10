@@ -9,9 +9,9 @@ import { Browser, Page } from 'puppeteer';
 
 const db = new Level('./leveldb', { valueEncoding: 'json' });
 
-const BATCH_SIZE = 3; 
+const BATCH_SIZE = 1; 
 const THROTTLE_TIME = 10000; 
-const CONCURRENCY_LIMIT = 2; // Number of concurrent browser instances
+const CONCURRENCY_LIMIT = 10; // Number of concurrent browser instances
 
 const filePath = path.join(__dirname, '..', 'ick.txt');
 const emails = fs.readFileSync(filePath, 'utf-8').split('\n').filter(Boolean);
@@ -35,7 +35,7 @@ const updateTable = (results: { email: string; success: boolean }[]) => {
     headers: ['Email', 'Status'],
     data: results.map(({ email, success }) => [
       email,
-      success ? '✅ Success' : '❌ Failed',
+      success ? 'Success' : 'Failed',
     ]),
   };
   table.setData(data);
