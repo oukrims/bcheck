@@ -36,14 +36,14 @@ export const getRandomProxy = (proxies: Proxy[]): Proxy => {
 };
 
 export const launchBrowser = async (): Promise<Browser> => {
-    const extensionPath = path.resolve('extensions', 'capsolver');
-    const proxyServer = `http://127.0.0.1:10000`;
+    // const extensionPath = path.resolve('extensions', 'capsolver');
+    const proxyServer = `http://127.0.0.1:9095`;
     
     const browser = await puppeteer.launch({
       headless: false,
       args: [
-        `--disable-extensions-except=${extensionPath}`,
-        `--load-extension=${extensionPath}`,
+        // `--disable-extensions-except=${extensionPath}`,
+        // `--load-extension=${extensionPath}`,
         `--proxy-server=${proxyServer}`,
       ],
     });
