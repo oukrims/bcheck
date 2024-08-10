@@ -40,7 +40,7 @@ export const launchBrowser = async (): Promise<Browser> => {
     const proxyServer = `http://127.0.0.1:10000`;
     
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       args: [
         // `--disable-extensions-except=${extensionPath}`,
         // `--load-extension=${extensionPath}`,
